@@ -1,10 +1,16 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
+
+
+// 1.路由配置的公共路由
+// 2.路由配置的且需要从后台拿到权限判断是否能访问的动态路由
+// 3.从后台配置获取到的路由，增加到路由里
+// 路由参数
+
+
 // 匹配views里面所有的.vue文件
 const modules = import.meta.glob('../pages/**/*.vue')
-
 console.log(modules)
-
 for (const path in modules) {
     console.log(path)
     console.log(path.split('pages/'))
@@ -14,8 +20,14 @@ for (const path in modules) {
 
 
 const routes = [
-    { path: '/login', component: import('../Login.vue') },
-    // { path: '/about', component: About },
+    { 
+        path: '/login', 
+        component: import('../Login.vue') 
+    },
+    { 
+        path: '/404', 
+        component: import('../views/404.vue') 
+    },
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置
