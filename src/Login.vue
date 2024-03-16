@@ -6,7 +6,10 @@ const title = ref('登录')
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <h1 class=" flex">
+    <span>{{ title }}</span>
+    <span>{{ title }}</span>
+  </h1>
 </template>
 
 <style scoped>
