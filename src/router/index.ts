@@ -22,11 +22,11 @@ for (const path in modules) {
 const routes = [
     { 
         path: '/login', 
-        component: import('../Login.vue') 
+        component: import('../views/Login.vue') 
     },
     { 
         path: '/404', 
-        component: import('../views/404.vue') 
+        component: import('../views/error/404.vue') 
     },
 ]
 

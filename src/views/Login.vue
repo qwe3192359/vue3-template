@@ -12,6 +12,4 @@ const title = ref('登录')
   </h1>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
